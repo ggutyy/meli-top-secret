@@ -1,4 +1,4 @@
-package com.meli.project.quasar.objects;
+package com.meli.project.quasar.entities;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
