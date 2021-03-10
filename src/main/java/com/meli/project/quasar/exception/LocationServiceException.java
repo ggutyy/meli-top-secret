@@ -14,5 +14,8 @@ public class LocationServiceException extends RuntimeException{
 	public LocationServiceException(String message){
 		super(message);
 	}
-
+	
+	public LocationServiceException(String message, Exception excp){
+		super(message, excp);
+	}
 }

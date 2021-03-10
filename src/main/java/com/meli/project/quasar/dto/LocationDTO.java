@@ -2,10 +2,13 @@ package com.meli.project.quasar.dto;
 
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class LocationDTO {
-	
+	@JsonProperty("x")
 	private Double xPosition;
-	
+	@JsonProperty("y")
 	private Double yPosition;
 	
 	public LocationDTO(double[] position) {
@@ -34,11 +37,9 @@ public class LocationDTO {
 		this.yPosition = yPosition;
 	}
 	
+	@JsonIgnore
 	public Boolean isInvalidPosition() {
 		return Objects.nonNull(xPosition) && Objects.nonNull(yPosition) ? Boolean.FALSE:Boolean.TRUE;
 	}
 	
-	public double[][] getPositionArray(){
-		return new double[][]{{xPosition.doubleValue(),yPosition.doubleValue()}};
-	}
 }

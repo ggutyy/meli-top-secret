@@ -1,5 +1,7 @@
 package com.meli.project.quasar.service;
 
+import java.util.List;
+
 public interface MessageService {
 	/**
 	 * Service to merge all message parts in an array
@@ -7,5 +9,5 @@ public interface MessageService {
 	 * @param msg partitioned
 	 * @return merged message
 	 */
-	String getMessage(String[] msg);
+	String getMessage(List<List<String>> msg);
 }
