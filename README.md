@@ -27,6 +27,7 @@ http://meliquasarrest-env.eba-p46x6h4c.us-east-1.elasticbeanstalk.com
 #### Services exposed
 ```
 POST -> /topsecret
+Usage: Service to calculate location of the spaceship based on the particular distances indicated in every satellite comunication
 Sample request body:
 
 {
@@ -66,7 +67,7 @@ Sample request body:
 ```
 ```
 POST -> /topsecret_split/{satellite_name} <---ADD PATH VARIABLE REPLACING "satellite_name"
-
+Usage: Set comunications param for satellite mentioned in the url path for a future spaceship location request
 Sample request body:
 {
   "distance": 0,
@@ -77,6 +78,7 @@ Sample request body:
 ```
 ```
 GET -> /topsecret_split/ 
+Usage: Get spaceship position and message emitted if previously the communication params were set
 ```
 
 ## Tools used
