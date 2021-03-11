@@ -81,5 +81,5 @@ GET -> /topsecret_split/
 
 ## Tools used
 ```
-Java - spring-boot - Elastic Beanstalk(aws)
+Java - spring-boot - maven - H2 in memory db - Elastic Beanstalk(aws)
 ```
