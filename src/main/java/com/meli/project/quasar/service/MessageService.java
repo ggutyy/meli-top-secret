@@ -10,4 +10,8 @@ public interface MessageService {
 	 * @return merged message
 	 */
 	String getMessage(List<List<String>> msg);
+	
+	String joinMessageWithComma(String[] message);
+	
+	String[] splitCommaMsg(String message);
 }

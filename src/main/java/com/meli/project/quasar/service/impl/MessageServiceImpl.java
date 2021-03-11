@@ -1,6 +1,7 @@
 package com.meli.project.quasar.service.impl;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -74,5 +75,14 @@ public class MessageServiceImpl implements MessageService {
 		}
 		return phrase.stream().distinct().collect(Collectors.joining(" "));
 	}
-
+	
+	@Override
+	public String joinMessageWithComma(String[] message) {
+		return Arrays.asList(message).stream().collect(Collectors.joining(","));
+	}
+	
+	@Override
+	public String[] splitCommaMsg(String message) {
+		return message.split(",");
+	}
 }
